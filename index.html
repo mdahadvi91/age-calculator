@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Age Calculator - Calculate Your Exact Age</title>
+    <meta name="description" content="Free online Age Calculator. Find out exactly how old you are in years, months, and days. 100% accurate, fast, and works offline in your browser.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Age Calculator",
+      "url": "https://yourdomain.com/",
+      "description": "Calculate your exact age in years, months, and days.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0" }
+    }
+    </script>
+</head>
+<body>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
+    <header>
+        <div class="container header-content">
+            <a href="/" class="logo">AHADEX TOOLS</a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Age <span class="gradient-text">Calculator</span></h1>
+            <p>Calculate your exact age in years, months, and days with precision.</p>
+        </section>
+
+        <section class="glass-card tool-container">
+            <label for="dob">Enter your Date of Birth:</label>
+            <input type="date" id="dob">
+            <button id="calc-btn">Calculate Age</button>
+
+            <div id="result" class="hidden">
+                <h3>Your Exact Age Is:</h3>
+                <div class="result-grid">
+                    <div><span id="years">0</span><p>Years</p></div>
+                    <div><span id="months">0</span><p>Months</p></div>
+                    <div><span id="days">0</span><p>Days</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card content-section">
+            <h2>How to use the Age Calculator?</h2>
+            <ol>
+                <li>Select your Date of Birth from the calendar.</li>
+                <li>Click on the <strong>Calculate Age</strong> button.</li>
+                <li>Instantly see your exact age in years, months, and days.</li>
+            </ol>
+        </section>
+
+        <section class="glass-card content-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <button class="faq-question">How is age calculated? <span>+</span></button>
+                <div class="faq-answer"><p>Age is calculated by finding the difference between your date of birth and today's date, factoring in leap years and month lengths.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Is my data safe? <span>+</span></button>
+                <div class="faq-answer"><p>Yes! Everything happens in your browser. We never upload or store your date of birth on any server.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Is this tool free? <span>+</span></button>
+                <div class="faq-answer"><p>Absolutely. This Age Calculator is 100% free to use.</p></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© <span id="year"></span> AHADEX TOOLS. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
