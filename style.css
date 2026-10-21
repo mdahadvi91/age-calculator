@@ -1,39 +1,164 @@
-:root { --bg-color: #0a0510; --text-color: #e2e8f0; --primary: #ec4899; --secondary: #8b5cf6; --glass-bg: rgba(255, 255, 255, 0.05); --glass-border: rgba(255, 255, 255, 0.1); }
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-body { background-color: var(--bg-color); color: var(--text-color); min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
-.glow { position: absolute; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.5; }
-.glow-1 { top: -10%; left: -10%; width: 400px; height: 400px; background: var(--primary); }
-.glow-2 { bottom: -10%; right: -10%; width: 400px; height: 400px; background: var(--secondary); }
+:root {
+    --bg: #030508;
+    --cyan: #00f0ff;
+    --purple: #9d00ff;
+    --glass: rgba(5, 10, 20, 0.75); /* গ্লাসটিকে একটু ডার্ক করা হলো যাতে টেক্সট পড়া যায় */
+    --border: rgba(0, 240, 255, 0.3);
+    --text: #a0c0d0;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg);
+    /* এখানে আপনার ব্যাকগ্রাউন্ড ইমেজ যুক্ত করা হলো */
+    background-image: linear-gradient(rgba(3, 5, 8, 0.8), rgba(3, 5, 8, 0.8)), url('ahad5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--text);
+    font-family: 'Rajdhani', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Cyberpunk Grid Background */
+.cyber-grid {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -2;
+    perspective: 1000px;
+}
+
+/* Glowing Orbs */
+.glow-orb { position: fixed; border-radius: 50%; filter: blur(100px); z-index: -1; }
+.top-left { top: -10%; left: -10%; width: 400px; height: 400px; background: rgba(0, 240, 255, 0.15); }
+.bottom-right { bottom: -10%; right: -10%; width: 400px; height: 400px; background: rgba(157, 0, 255, 0.15); }
+
 .container { max-width: 800px; margin: 0 auto; padding: 0 20px; width: 100%; }
-header { padding: 20px 0; background: rgba(10, 5, 16, 0.6); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--glass-border); }
+
+/* Header & Logo */
+header { padding: 15px 0; background: rgba(3, 5, 8, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
 .header-content { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 1.5rem; font-weight: 800; color: #fff; text-decoration: none; }
-nav a { color: #cbd5e1; text-decoration: none; margin-left: 15px; font-size: 0.9rem; transition: 0.3s; }
-nav a:hover { color: var(--primary); }
+.logo { display: flex; align-items: center; gap: 10px; font-family: 'Orbitron', sans-serif; font-size: 1.5rem; font-weight: 900; color: #fff; text-decoration: none; letter-spacing: 2px; }
+.logo-img { height: 35px; width: auto; object-fit: contain; } /* লোগোর সাইজ */
+.logo span { color: var(--cyan); font-size: 1rem; }
+nav a { color: var(--text); text-decoration: none; margin-left: 20px; font-weight: 600; letter-spacing: 1px; transition: 0.3s; }
+nav a:hover { color: var(--cyan); text-shadow: 0 0 10px var(--cyan); }
+
+/* Hero Section */
 .hero { text-align: center; margin: 60px 0 40px; }
-.hero h1 { font-size: 3rem; margin-bottom: 10px; }
-.gradient-text { background: linear-gradient(to right, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.hero p { color: #94a3b8; font-size: 1.1rem; }
-.glass-card { background: var(--glass-bg); backdrop-filter: blur(16px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 40px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-label { display: block; margin-bottom: 10px; font-weight: 600; color: #cbd5e1; }
-input[type="date"] { width: 100%; padding: 15px; background: rgba(0,0,0,0.4); border: 1px solid var(--glass-border); border-radius: 12px; color: #fff; font-size: 1rem; margin-bottom: 20px; outline: none; }
-input[type="date"]:focus { border-color: var(--primary); }
-button#calc-btn { width: 100%; padding: 16px; background: linear-gradient(to right, var(--primary), var(--secondary)); color: #fff; border: none; border-radius: 12px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: 0.3s; }
-button#calc-btn:hover { opacity: 0.9; transform: translateY(-2px); }
-#result { margin-top: 30px; padding: 25px; background: rgba(236, 72, 153, 0.1); border: 1px solid rgba(236, 72, 153, 0.3); border-radius: 16px; text-align: center; }
-#result h3 { margin-bottom: 20px; color: #f8fafc; }
-.result-grid { display: flex; justify-content: center; gap: 30px; }
-.result-grid div span { display: block; font-size: 2.5rem; font-weight: 800; color: var(--primary); }
-.result-grid div p { color: #94a3b8; font-size: 0.9rem; margin-top: 5px; }
-.content-section h2 { margin-bottom: 20px; font-size: 1.5rem; }
-.content-section ol { margin-left: 20px; color: #cbd5e1; line-height: 2; }
-.content-section strong { color: var(--primary); }
-.faq-item { border-bottom: 1px solid var(--glass-border); margin-bottom: 10px; }
-.faq-question { width: 100%; text-align: left; background: none; border: none; color: #e2e8f0; font-size: 1.1rem; font-weight: 600; padding: 15px 0; cursor: pointer; display: flex; justify-content: space-between; }
-.faq-answer { display: none; padding-bottom: 15px; color: #94a3b8; }
-.faq-answer p { line-height: 1.6; }
-footer { margin-top: auto; padding: 30px 0; text-align: center; color: #64748b; border-top: 1px solid var(--glass-border); }
-.footer-links a { color: #94a3b8; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
-.footer-links a:hover { color: var(--primary); }
+.hero h1 { font-family: 'Orbitron', sans-serif; font-size: 2.5rem; color: #fff; text-shadow: 0 0 20px rgba(0, 240, 255, 0.5); letter-spacing: 3px; }
+.subtitle { font-size: 1rem; color: var(--cyan); letter-spacing: 2px; margin-top: 10px; font-weight: 600; }
+
+/* Holographic Card */
+.holo-card {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.1), inset 0 0 20px rgba(0, 240, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header { background: rgba(0, 240, 255, 0.1); padding: 10px 15px; display: flex; align-items: center; border-bottom: 1px solid var(--border); }
+.dot { width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; }
+.red { background: #ff5f56; } .yellow { background: #ffbd2e; } .green { background: #27c93f; }
+.card-title { font-size: 0.8rem; font-family: 'Orbitron', sans-serif; margin-left: 10px; color: var(--cyan); letter-spacing: 2px; }
+
+.card-body { padding: 30px; }
+
+/* Inputs and Buttons */
+label { display: block; font-family: 'Orbitron', sans-serif; font-size: 0.9rem; margin-bottom: 10px; color: #fff; letter-spacing: 1px; }
+.cyber-input {
+    width: 100%; padding: 15px; background: rgba(0, 0, 0, 0.6); border: 1px solid var(--border); color: var(--cyan); font-family: 'Orbitron', sans-serif; font-size: 1.1rem; margin-bottom: 20px; outline: none; transition: 0.3s;
+}
+.cyber-input:focus { border-color: var(--cyan); box-shadow: 0 0 15px rgba(0, 240, 255, 0.3); }
+
+.cyber-btn {
+    width: 100%; padding: 16px; background: transparent; color: var(--cyan); border: 1px solid var(--cyan); font-family: 'Orbitron', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 2px; cursor: pointer; transition: 0.3s; position: relative; overflow: hidden;
+}
+.cyber-btn:hover { background: rgba(0, 240, 255, 0.1); box-shadow: 0 0 20px rgba(0, 240, 255, 0.4); text-shadow: 0 0 5px var(--cyan); }
+
+/* Results HUD */
+#result { margin-top: 30px; padding-top: 20px; border-top: 1px dashed var(--border); }
+.result-header { font-family: 'Orbitron', sans-serif; color: var(--cyan); margin-bottom: 20px; font-size: 0.9rem; letter-spacing: 2px; }
+.result-grid { display: flex; justify-content: space-between; gap: 10px; }
+.stat-box { flex: 1; text-align: center; background: rgba(0, 240, 255, 0.05); border: 1px solid rgba(0, 240, 255, 0.2); padding: 15px 5px; border-radius: 4px; }
+.stat-number { font-family: 'Orbitron', sans-serif; font-size: 2rem; font-weight: 900; color: #fff; text-shadow: 0 0 15px var(--cyan); display: block; }
+.stat-label { font-size: 0.8rem; color: var(--cyan); letter-spacing: 1px; margin-top: 5px; font-weight: 600; }
+
+/* Content Sections */
+.content-section { padding: 30px; }
+.content-section h2 { font-family: 'Orbitron', sans-serif; font-size: 1.2rem; color: #fff; margin-bottom: 20px; letter-spacing: 1px; }
+.text-cyan { color: var(--cyan); }
+.content-section ul { list-style: none; }
+.content-section li { margin-bottom: 15px; font-size: 1.1rem; color: var(--text); font-weight: 600; }
+
+/* FAQ */
+.faq-item { border-bottom: 1px solid rgba(0, 240, 255, 0.1); margin-bottom: 10px; }
+.faq-question { width: 100%; text-align: left; background: none; border: none; color: #fff; font-size: 1.1rem; font-weight: 600; padding: 15px 0; cursor: pointer; display: flex; justify-content: space-between; font-family: 'Rajdhani', sans-serif; letter-spacing: 1px; }
+.faq-question span { color: var(--cyan); font-family: 'Orbitron', sans-serif; }
+.faq-answer { display: none; padding-bottom: 15px; color: var(--text); font-size: 1rem; line-height: 1.6; }
+
+/* Footer */
+footer { margin-top: auto; padding: 30px 0; text-align: center; border-top: 1px solid var(--border); background: rgba(3, 5, 8, 0.8); }
+footer p { font-family: 'Orbitron', sans-serif; font-size: 0.8rem; letter-spacing: 1px; color: var(--text); }
+.footer-links { margin-top: 15px; }
+.footer-links a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: 600; letter-spacing: 1px; font-size: 0.9rem; }
+.footer-links a:hover { color: var(--cyan); text-shadow: 0 0 10px var(--cyan); }
+
 .hidden { display: none; }
-@media (max-width: 600px) { .hero h1 { font-size: 2.2rem; } .glass-card { padding: 25px; } .result-grid { flex-direction: row; gap: 15px; } .result-grid div span { font-size: 2rem; } }
+
+@media (max-width: 600px) {
+    .hero h1 { font-size: 1.8rem; }
+    .result-grid { flex-direction: column; }
+    .stat-box { display: flex; justify-content: space-between; align-items: center; padding: 15px; }
+    .stat-number { font-size: 1.8rem; margin-bottom: 0; }
+}
+
+/* Date Input Professional Fix for Mobile */
+input[type="date"] {
+    cursor: pointer;
+    position: relative;
+    z-index: 20; /* যাতে অন্য কোনো লেয়ার এর ওপর চলে না আসে */
+}
+
+/* ক্যালেন্ডার আইকনকে সায়ান এবং দৃশ্যমান করা */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(80%) sepia(100%) saturate(5000%) hue-rotate(150deg);
+    cursor: pointer;
+    opacity: 1;
+    padding: 5px;
+}
+
+/* Article Content Styling for AdSense */
+.article-content h3 {
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    margin: 25px 0 15px;
+    letter-spacing: 1px;
+}
+.article-content p, .article-content ul {
+    color: var(--text);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.article-content ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+.article-content strong {
+    color: var(--cyan);
+}

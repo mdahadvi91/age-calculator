@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Age Calculator - Calculate Your Exact Age</title>
-    <meta name="description" content="Free online Age Calculator. Find out exactly how old you are in years, months, and days. 100% accurate, fast, and works offline in your browser.">
+    <title>Free Age Calculator - Calculate Exact Age in Years, Months, Days</title>
+    <meta name="description" content="Use our free online Age Calculator to find your exact age in years, months, and days. Learn how age is calculated, leap year rules, and chronological age.">
+    <meta name="keywords" content="age calculator, how old am i, date of birth calculator, exact age calculator, chronological age">
+    <link rel="canonical" href="https://yourdomain.com/">
+    
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Free Age Calculator - Find Your Exact Age">
+    <meta property="og:description" content="Calculate your exact age in years, months, and days instantly.">
+    <meta property="og:type" content="website">
+    
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Advanced Schema Markup for Google -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -15,79 +25,152 @@
       "url": "https://yourdomain.com/",
       "description": "Calculate your exact age in years, months, and days.",
       "applicationCategory": "UtilityApplication",
-      "operatingSystem": "Any",
-      "offers": { "@type": "Offer", "price": "0" }
+      "operatingSystem": "All",
+      "author": { "@type": "Organization", "name": "AHADEX TOOLS" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How is age calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Age is calculated by finding the difference between your date of birth and the current date, factoring in the varying number of days in months and leap years." }
+      }, {
+        "@type": "Question",
+        "name": "Is my data safe?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, all calculations happen locally in your browser. We do not store or transmit your personal data." }
+      }]
     }
     </script>
 </head>
 <body>
-    <div class="glow glow-1"></div>
-    <div class="glow glow-2"></div>
+    <div class="cyber-grid"></div>
+    <div class="glow-orb top-left"></div>
+    <div class="glow-orb bottom-right"></div>
 
     <header>
         <div class="container header-content">
-            <a href="/" class="logo">AHADEX TOOLS</a>
+            <a href="/" class="logo">
+                <img src="hridoyvi.png" alt="AHADEX Logo" class="logo-img" onerror="this.style.display='none'">
+                AHADEX<span>.SYS</span>
+            </a>
             <nav>
-                <a href="/">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="/">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="contact.html">CONTACT</a>
             </nav>
         </div>
     </header>
 
     <main class="container">
         <section class="hero">
-            <h1>Age <span class="gradient-text">Calculator</span></h1>
-            <p>Calculate your exact age in years, months, and days with precision.</p>
+            <h1 class="glitch-text" data-text="AGE CALCULATOR">AGE CALCULATOR</h1>
+            <p class="subtitle">SYSTEM INITIALIZED. ENTER DOB TO CALCULATE EXACT AGE.</p>
         </section>
 
-        <section class="glass-card tool-container">
-            <label for="dob">Enter your Date of Birth:</label>
-            <input type="date" id="dob">
-            <button id="calc-btn">Calculate Age</button>
+        <!-- Main Tool Card -->
+        <section class="holo-card tool-container">
+            <div class="card-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="card-title">DATA_INPUT</span>
+            </div>
+            <div class="card-body">
+                <label for="dob">SELECT DATE OF BIRTH:</label>
+                <input type="date" id="dob" class="cyber-input">
+                <button id="calc-btn" class="cyber-btn">INITIALIZE CALCULATION</button>
 
-            <div id="result" class="hidden">
-                <h3>Your Exact Age Is:</h3>
-                <div class="result-grid">
-                    <div><span id="years">0</span><p>Years</p></div>
-                    <div><span id="months">0</span><p>Months</p></div>
-                    <div><span id="days">0</span><p>Days</p></div>
+                <div id="result" class="hidden">
+                    <div class="result-header">// ANALYSIS COMPLETE</div>
+                    <div class="result-grid">
+                        <div class="stat-box">
+                            <span id="years" class="stat-number">0</span>
+                            <p class="stat-label">YEARS</p>
+                        </div>
+                        <div class="stat-box">
+                            <span id="months" class="stat-number">0</span>
+                            <p class="stat-label">MONTHS</p>
+                        </div>
+                        <div class="stat-box">
+                            <span id="days" class="stat-number">0</span>
+                            <p class="stat-label">DAYS</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="glass-card content-section">
-            <h2>How to use the Age Calculator?</h2>
-            <ol>
-                <li>Select your Date of Birth from the calendar.</li>
-                <li>Click on the <strong>Calculate Age</strong> button.</li>
-                <li>Instantly see your exact age in years, months, and days.</li>
-            </ol>
+        <!-- Extensive SEO Content for AdSense Approval -->
+        <section class="holo-card content-section article-content">
+            <h2><span class="text-cyan">></span> THE SCIENCE OF AGE CALCULATION</h2>
+            <p>An <strong>Age Calculator</strong> is a digital tool designed to determine a person's exact age based on their date of birth. While it may seem like a simple subtraction of years, calculating precise age in years, months, and days involves a complex algorithm that accounts for leap years, varying month lengths, and the Earth's orbit around the Sun.</p>
+            
+            <p>Whether you need to know your exact age for a legal document, a visa application, a medical form, or simply out of curiosity ("how old am I exactly?"), our free online calculator provides 100% accurate results instantly.</p>
+
+            <h3>How Does the Age Calculator Work?</h3>
+            <p>Our tool uses the Gregorian calendar system, which is the most widely used civil calendar in the world. The algorithm works in three steps:</p>
+            <ul>
+                <li><strong>Step 1 (Days):</strong> It subtracts your birth date from today's date. If today's day is less than your birth day, it borrows days from the previous month.</li>
+                <li><strong>Step 2 (Months):</strong> It subtracts the birth month from the current month. If the current month is less than the birth month, it borrows 12 months from the previous year.</li>
+                <li><strong>Step 3 (Years):</strong> Finally, it subtracts your birth year from the current year, adjusting for the borrowed months.</li>
+            </ul>
+            <p>Furthermore, it automatically factors in <strong>Leap Years</strong> (years divisible by 4, like 2000, 2004, 2024), which add an extra day (February 29) to the calendar.</p>
+
+            <h3>Why is Knowing Your Exact Age Important?</h3>
+            <p>Knowing your exact chronological age is crucial in many aspects of life:</p>
+            <ul>
+                <li><strong>Legal and Administrative:</strong> Applying for a passport, driver's license, or government pension requires exact age verification.</li>
+                <li><strong>Healthcare:</strong> Doctors use precise age to calculate pediatric dosages, track growth milestones, and assess risks for age-related conditions.</li>
+                <li><strong>Fitness and Sports:</strong> Many sports categorize athletes by age groups (e.g., Under-19, Under-21) where even a few days can make a difference.</li>
+                <li><strong>Education:</strong> School admission criteria are strictly based on a child's age as of a specific cutoff date.</li>
+            </ul>
+
+            <h3>Types of Age</h3>
+            <p>While this tool calculates <strong>Chronological Age</strong> (the actual time elapsed since birth), science recognizes other forms of age:</p>
+            <ul>
+                <li><strong>Biological Age:</strong> How well your body functions compared to your chronological age. Lifestyle, diet, and genetics affect this.</li>
+                <li><strong>Psychological Age:</strong> How old you feel and behave mentally.</li>
+                <li><strong>Social Age:</strong> Your social roles and expectations compared to societal norms for your age group.</li>
+            </ul>
+
+            <h3>100% Privacy and Security</h3>
+            <p>We take your privacy seriously. Unlike many other websites, our Age Calculator processes all data <strong>locally in your web browser using JavaScript</strong>. This means your date of birth is never uploaded to our servers, never stored in a database, and never shared with third parties. It is completely safe and secure.</p>
         </section>
 
-        <section class="glass-card content-section">
-            <h2>Frequently Asked Questions</h2>
+        <!-- FAQ Section -->
+        <section class="holo-card content-section">
+            <h2><span class="text-cyan">></span> FREQUENTLY ASKED QUESTIONS</h2>
             <div class="faq-item">
-                <button class="faq-question">How is age calculated? <span>+</span></button>
-                <div class="faq-answer"><p>Age is calculated by finding the difference between your date of birth and today's date, factoring in leap years and month lengths.</p></div>
+                <button class="faq-question">How accurate is this Age Calculator? <span>+</span></button>
+                <div class="faq-answer"><p>Our calculator is 100% accurate. It uses the official Gregorian calendar system and factors in leap years and the exact number of days in every month.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What is a leap year and how does it affect my age? <span>+</span></button>
+                <div class="faq-answer"><p>A leap year occurs every four years and has 366 days (with February 29). Our algorithm automatically detects if you were born in a leap year or if a leap year has passed during your lifetime, ensuring precise day calculations.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Can I calculate age for a future date? <span>+</span></button>
+                <div class="faq-answer"><p>Currently, the tool calculates age up to the present day. If you input a future date, it will not compute a valid age.</p></div>
             </div>
             <div class="faq-item">
                 <button class="faq-question">Is my data safe? <span>+</span></button>
-                <div class="faq-answer"><p>Yes! Everything happens in your browser. We never upload or store your date of birth on any server.</p></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Is this tool free? <span>+</span></button>
-                <div class="faq-answer"><p>Absolutely. This Age Calculator is 100% free to use.</p></div>
+                <div class="faq-answer"><p>Absolutely. All calculations are done client-side in your browser. No data is sent to our servers.</p></div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>© <span id="year"></span> AHADEX TOOLS. All rights reserved.</p>
+            <p>© <span id="year"></span> AHADEX TOOLS // SYSTEM V.1.0</p>
             <div class="footer-links">
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms of Service</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
             </div>
         </div>
     </footer>
